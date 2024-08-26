@@ -1,5 +1,55 @@
-.text {
-    font-size: 90px;
-    font-family: 'Ubuntu';
-    font-weight: bold;
+.main {
+  background-image: url(../images/background-main.png);
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__content {
+    margin-top: 59px;
+    width: 585px;
+  }
+  &__desc {
+    letter-spacing: 4px;
+    font-size: 35px;
+    color: $black;
+    margin-bottom: 22px;
+  }
+  &__title {
+    color: $secondary-color;
+    font-size: 130px;
+    margin-left: -6px;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+  &__subtitle {
+    font-weight: 300;
+    line-height: 35px;
+    font-size: 27px;
+    padding-top: 42px;
+    color: $primary-color;
+    span {
+      font-weight: 700;
+    }
+  }
+  &__price {
+    margin-top: 30px;
+    display: flex;
+    align-items: baseline;
+    color: $secondary-color;
+    font-weight: 700;
+    font-size: 55px;
+    span {
+        color: $span-color;
+        font-weight: 300;
+        font-size: 35px;
+        margin-left: 36px;
+        text-decoration: line-through;
+    }
+  }
+}
+.line {
+    width: 700px;
+    position: absolute;
+    left: 0px;
 }
