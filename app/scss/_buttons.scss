@@ -15,3 +15,12 @@
     background-color: $hover-color;
   }
 }
+
+@media(max-width:800px) {
+  .main {
+    .button {
+      min-height: 50px;
+      max-width: 228px;
+    }
+  }
+}
