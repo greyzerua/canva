@@ -14,3 +14,15 @@
     letter-spacing: 1.5px;
     background-color: $background-color;
 }
+
+@media (max-width: 500px) {
+  .header {
+    display: flex;
+    padding-top: 29px;
+    justify-content: flex-end;
+  }
+  .start-course {
+    font-size: 14px;
+    padding: 0px 13px;
+  }
+}
