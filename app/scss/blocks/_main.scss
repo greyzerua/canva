@@ -82,8 +82,7 @@
     color: $text-color;
     font-size: 22px;
     font-weight: 500;
-    background-image: url(../../images/svg/circle.svg);
-
+    background-image: url(../images/svg/circle.svg);
     width: 59px;
     height: 59px;
   }
@@ -153,7 +152,7 @@
 
 @media (max-width: 580px) {
   .main {
-    background-image: url(../../images/background-main-mobile.png);
+    background-image: url(../images/background-main-mobile.png);
     background-position-y: 48%;
     border-bottom-left-radius: 60px;
     &__content {
