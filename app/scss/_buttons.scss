@@ -1,0 +1,17 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "TT Ramillas Trl";
+  font-size: 22px;
+  border-radius: 90px;
+  background-color: $secondary-color;
+  min-height: 60px;
+  max-width: 279px;
+  padding: 0 15px;
+  transition: 0.3s all;
+  box-shadow: 0px 0px 15px 0px #00000033;
+  &:hover {
+    background-color: $hover-color;
+  }
+}

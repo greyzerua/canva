@@ -1,4 +1,4 @@
-const { src, dest, watch, parallel, series } = require('gulp');
+const {src, dest, watch, parallel, series} = require('gulp');
 
 const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
@@ -14,13 +14,6 @@ const fonter = require('gulp-fonter');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const svgSprite = require('gulp-svg-sprite');
 const include = require('gulp-include');
-const babel = require('gulp-babel');
-
-function transpile() {
-    return src('src/**/*.js')
-        .pipe(babel())
-        .pipe(dest('dist'));
-}
 
 function pages() {
     return src('app/pages/*.html')
@@ -45,15 +38,22 @@ function images() {
     return src(['app/images/src/*.*', '!app/images/src/*.svg'])
         .pipe(newer('app/images/dist'))
         .pipe(avif({quality : 50}))
+
+        .pipe(src('app/images/src/*.*'))
         .pipe(newer('app/images/dist'))
         .pipe(webp())
+
+        .pipe(src('app/images/src/*.*'))
         .pipe(newer('app/images'))
         .pipe(imagemin())
+
         .pipe(dest('app/images'))
 }
 
 function sprite() {
-    return src('app/images/*.svg')
+    return src('app/images/**/*.svg',
+               '!app/images/**/*.html',
+    )
         .pipe(svgSprite({
             mode: {
                 stack: {
@@ -67,8 +67,8 @@ function sprite() {
 
 function scripts() {
     return src([
-        'app/js/main.js',
-        'node_modules/@fortawesome/fontawesome-free/js/all.min.js'
+        'app/js/*.js',
+        '!app/js/main.min.js',
     ])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
@@ -78,8 +78,8 @@ function scripts() {
 
 function styles() {
     return src('app/scss/style.scss')
-        .pipe(autoprefixer({ overrideBrowserslist: ['last 10 version'] }))
-        .pipe(concat('style.min.css'))
+        .pipe (autoprefixer({ overrideBrowserslist: ['last 10 version'] }))
+        .pipe (concat('style.min.css'))
         .pipe(scss({outputStyle: 'compressed'}))
         .pipe(dest('app/css'))
         .pipe(browserSync.stream())
@@ -91,12 +91,14 @@ function watching() {
             baseDir: "app/"
         }
     });
-    watch(['app/scss/*.scss'], styles)
+    watch(['app/scss/**/*.scss'], styles)
     watch(['app/images/src'], images)
-    watch(['app/js/main.js'], scripts)
+    watch(['app/js/*.js','!app/js/main.min.js',], scripts)
     watch(['app/components/*', 'app/pages/*'], pages)
     watch(['app/*.html']).on('change', browserSync.reload);
 }
+
+
 
 function building() {
     return src([
@@ -117,7 +119,6 @@ function cleanDist() {
         .pipe(clean())
 }
 
-
 exports.styles = styles;
 exports.images = images;
 exports.fonts = fonts;
@@ -126,9 +127,6 @@ exports.building = building;
 exports.sprite = sprite;
 exports.scripts = scripts;
 exports.watching = watching;
-exports.transpile = transpile;
 
-exports.build = series(cleanDist, parallel(building, transpile));
-
-exports.default = parallel(styles, images, scripts, pages, watching, transpile);
-
+exports.build = series(cleanDist, building);
+exports.default = parallel(styles, images, scripts, pages, watching);
