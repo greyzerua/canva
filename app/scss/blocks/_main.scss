@@ -25,7 +25,7 @@
   }
   &__subtitle {
     font-weight: 300;
-    line-height: 35px;
+    line-height: 1.5;
     font-size: 27px;
     padding-top: 42px;
     color: $primary-color;
@@ -114,6 +114,7 @@
 
 @media (max-width: 800px) {
   .main {
+    background-position: 66%;
     &__content {
       display: flex;
       flex-direction: column;
@@ -150,10 +151,11 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 580px) {
   .main {
     background-image: url(../../images/background-main-mobile.png);
-    background-position-y: bottom;
+    background-position-y: 48%;
+    border-bottom-left-radius: 60px;
     &__content {
       padding-bottom: 24px;
       margin-top: 39px;
@@ -170,6 +172,7 @@
       margin-bottom: 14px;
     }
     &__price {
+      margin: 25px 0;
       font-size: 33px;
       span {
         font-size: 20px;
@@ -181,7 +184,7 @@
       padding: 5px 17px;
       border-radius: 90px;
       align-self: center;
-
+      margin-top: 46px;
       &_text {
         max-width: 100px;
         font-size: 13px;
@@ -202,4 +205,11 @@
   .line {
     width: 142px;
   }
+}
+
+@media (max-width: 450px) {
+  .main {
+    background-position-y: bottom;
+  }
+  
 }
