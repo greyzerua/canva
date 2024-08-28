@@ -1,9 +1,9 @@
-@import 'variables';
+@import "variables";
 .main {
   // background-image: url(../images/svg/main-bg.svg);
   width: 100vw;
   // background-position-y: 25%;
-  background-color: #F4F5F8;
+  background-color: #f4f5f8;
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
@@ -17,7 +17,7 @@
     top: 500px;
   }
 
-  &_svg2 {    
+  &_svg2 {
     right: 80px;
     top: 465px;
   }
@@ -52,7 +52,6 @@
     height: 100%;
   }
 
-
   &__img_svg {
     position: absolute;
   }
@@ -64,13 +63,11 @@
 
   &__img_svg2 {
     top: 0;
-
   }
 
   &__img_svg3 {
     top: 189px;
     right: -43px;
-
   }
 
   &__content {
@@ -179,8 +176,8 @@
   }
   .line-mobile {
     display: block;
-    width: 295px;
-    margin-left: -20px;
+    width: 312px;
+    margin-left: -35px;
   }
   .main {
     &__title {
@@ -213,7 +210,6 @@
 @media (max-width: 800px) {
   .line-mobile {
     width: 212px;
-    margin-left: -20px;
   }
   .main {
     background-position: 66%;
@@ -256,7 +252,6 @@
 }
 
 @media (max-width: 610px) {
-
   .main {
     border-bottom-left-radius: 60px;
     &__img {
@@ -283,8 +278,8 @@
     }
     &__img_svg2 {
       width: 35px;
-        top: 210px;
-        left: 10px;
+      top: 210px;
+      left: 10px;
     }
     &__img_svg1 {
       display: none;
@@ -339,7 +334,7 @@
     }
   }
   .line {
-    width: 142px;
+    width: 157px;
   }
   .line-mobile {
     width: 140px;
@@ -350,5 +345,4 @@
   .main {
     background-position-y: bottom;
   }
-  
 }
