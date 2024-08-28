@@ -1,0 +1,15 @@
+.work-examples {
+    background-color: #76C4EF;
+    border-top-left-radius: 60px;
+    padding: 60px 0;
+    text-align: center;
+  
+    &__title {
+      @include section-title;
+      margin: 0 auto 40px;
+    }
+  
+    .button--secondary {
+      margin: 0 auto;
+    }
+  }

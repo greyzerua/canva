@@ -1,18 +1,39 @@
 .button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   font-family: "TT Ramillas Trl";
   font-size: 22px;
   border-radius: 90px;
-  background-color: $secondary-color;
   min-height: 60px;
-  max-width: 279px;
+  width: 279px;
   padding: 0 15px;
   transition: 0.3s all;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button--primary {
+  @extend .button;
+  background-color: $secondary-color;
+  color: $white-color;
   box-shadow: 0px 0px 15px 0px #00000033;
+  
   &:hover {
     background-color: $hover-color;
+  }
+}
+
+.button--secondary {
+  @extend .button;
+  background-color: $text-color;
+  color: $white-color;
+  border: 2px solid $white-color;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: darken($text-color, 10%);
+    box-shadow: 0 0 15px rgba(darken($text-color, 20%), 0.5);
   }
 }
 
