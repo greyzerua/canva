@@ -39,14 +39,18 @@ class CountdownTimer {
             seconds: document.querySelector('.main__timer_wrap .timer__inner:nth-child(4) .timer')
         };
         
-        const initialTime = {
+        this.initialTime = {
             days: 0,
             hours: 23,
             minutes: 59,
             seconds: 59
         };
 
-        this.endTime = this.getEndTime() || this.calculateEndTime(initialTime);
+        this.initTimer();
+    }
+
+    initTimer() {
+        this.endTime = this.getEndTime() || this.calculateEndTime(this.initialTime);
         this.timeLeft = this.calculateTimeLeft();
     }
 
@@ -58,10 +62,14 @@ class CountdownTimer {
     tick() {
         this.timeLeft = this.calculateTimeLeft();
         if (this.timeLeft.total <= 0) {
-            clearInterval(this.timer);
-            this.timeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+            this.restartTimer();
         }
         this.updateDisplay();
+    }
+
+    restartTimer() {
+        this.endTime = this.calculateEndTime(this.initialTime);
+        this.timeLeft = this.calculateTimeLeft();
         this.saveEndTime();
     }
 
@@ -80,7 +88,7 @@ class CountdownTimer {
     updateDisplay() {
         for (const [unit, element] of Object.entries(this.timerElements)) {
             if (element) {
-                element.textContent = this.padZero(this.timeLeft[unit]);
+                element.textContent = this.padZero(Math.max(0, this.timeLeft[unit]));
             }
         }
     }
@@ -103,9 +111,27 @@ class CountdownTimer {
         const duration = (time.days * 24 * 60 * 60 + time.hours * 60 * 60 + time.minutes * 60 + time.seconds) * 1000;
         return now + duration;
     }
+
+    reset() {
+        clearInterval(this.timer);
+        localStorage.removeItem('countdownTimerEnd');
+        this.initTimer();
+        this.start();
+    }
 }
 
+window.globalTimer = null;
+
+window.resetTimer = function() {
+    if (window.globalTimer) {
+        window.globalTimer.reset();
+        console.log('Timer has been reset to initial time.');
+    } else {
+        console.log('Timer has not been initialized yet.');
+    }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
-    const timer = new CountdownTimer();
-    timer.start();
+    window.globalTimer = new CountdownTimer();
+    window.globalTimer.start();
 });
