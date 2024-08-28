@@ -1,0 +1,89 @@
+@import 'variables';
+
+.footer {
+  background-color: #E07FC1;
+  padding: 40px 0;
+  color: #fff;
+  border-top-left-radius: 65px;
+  border-top-right-radius: 65px;
+  position: relative;
+  overflow: hidden;
+
+  .width-container {
+    padding: 0 40px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 40px;
+
+    img {
+      max-width: 100px;
+    }
+  }
+
+  &__info {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  &__copyright {
+    flex: 2;
+    max-width: none;
+    text-align: left;
+    @include default-label-text;
+    line-height: 30px;
+    color: #fff;
+  }
+
+  &__company-info, &__links {
+    flex: 1;
+    @include default-label-text;
+    line-height: 30px;
+    color: #fff;
+  }
+
+  &__company-info {
+    text-align: center;
+    p {
+      margin: 0;
+      &:last-child {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 5px;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 5px;
+        height: 2px;
+        background-color: #fff;
+      }
+
+      &:hover::after {
+        height: 2px;
+      }
+    }
+  }
+}

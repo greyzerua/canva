@@ -1,3 +1,5 @@
+@import 'variables';
+
 .main {
   // background-image: url(../images/svg/main-bg.svg);
   width: 100vw;
@@ -143,9 +145,7 @@
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    font-weight: 300;
-    font-size: 17px;
-    color: $text-secondary;
+    @include default-label-text;
   }
   .timer {
     display: flex;
