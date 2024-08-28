@@ -1,3 +1,35 @@
+
+const getNextDate = () => {
+    const monthsDictionary = [
+      'січня',
+      'лютого',
+      'березня',
+      'квітня',
+      'травня',
+      'червня',
+      'липня',
+      'серпня',
+      'вересня',
+      'жовтня',
+      'листопада',
+      'грудня'
+    ];
+    const tomorrowDate = new Date();
+    tomorrowDate.setDate(tomorrowDate.getDate() + 1);
+    const monthIndex = tomorrowDate.getMonth();
+  
+    return `${tomorrowDate.getDate()} ${monthsDictionary[monthIndex]}`;
+  };
+  
+  const setStartDate = () => {
+    const el = document.querySelector('#start-date');
+    if (el) {
+      el.innerHTML = getNextDate();
+    }
+  }
+  
+  setStartDate();  
+
 class CountdownTimer {
     constructor() {
         this.timerElements = {

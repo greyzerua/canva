@@ -275,7 +275,7 @@
       display: block;
     }
     &__img_svg3 {
-      top: 393px;
+      top: 410px;
       right: unset;
       left: -10px;
       width: 23px;
@@ -288,13 +288,6 @@
     }
     &__img_svg1 {
       display: none;
-    }
-    &__img_svg3 {
-      top: 393px;
-      right: unset;
-      left: -10px;
-      width: 23px;
-      height: 23px;
     }
     &__content {
       padding-bottom: 24px;
@@ -314,15 +307,17 @@
     &__price {
       margin: 25px 0;
       font-size: 33px;
-      gap: 12px;
+      gap: 9px;
       span {
         font-size: 20px;
       }
     }
     &__timer {
+      background-image: url(../images/blur.png);
+      background-repeat: no-repeat;
+      width: 350px;
       justify-content: center;
-      background-color: #f4f5f8;
-      padding: 5px 17px;
+      padding: 10px 17px 5px;
       border-radius: 90px;
       align-self: center;
       margin-top: 46px;
