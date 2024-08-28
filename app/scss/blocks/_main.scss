@@ -1,7 +1,4 @@
 @import 'variables';
-.mobile__img {
-  display: none;
-}
 .main {
   // background-image: url(../images/svg/main-bg.svg);
   width: 100vw;
@@ -215,7 +212,6 @@
 
 @media (max-width: 800px) {
   .line-mobile {
-    
     width: 212px;
     margin-left: -20px;
   }
@@ -260,14 +256,12 @@
 }
 
 @media (max-width: 610px) {
-  .mobile__img {
-    display: block;
-  }
+
   .main {
     border-bottom-left-radius: 60px;
     &__img {
-      display: none;
-      width: 243px;
+      width: auto;
+      height: 372px;
       margin-bottom: 86px;
     }
     &__img__bg {
