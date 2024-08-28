@@ -258,9 +258,13 @@
 }
 
 @media (max-width: 610px) {
+  .mobile__img {
+    display: block;
+  }
   .main {
     border-bottom-left-radius: 60px;
     &__img {
+      display: none;
       width: 243px;
       margin-bottom: 86px;
     }
