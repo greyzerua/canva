@@ -1,5 +1,7 @@
 @import 'variables';
-
+.mobile__img {
+  display: none;
+}
 .main {
   // background-image: url(../images/svg/main-bg.svg);
   width: 100vw;
