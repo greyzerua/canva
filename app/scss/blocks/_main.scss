@@ -1,6 +1,7 @@
 @import 'variables';
 .main {
-  width: 100vw;
+  max-width: 100vw;
+  max-height: 100vh;
   background-color: #F4F5F8;
   background-repeat: no-repeat;
   position: relative;
@@ -164,6 +165,22 @@
 .line-mobile {
   display: none;
 }
+
+@media (max-width: 1700px) {
+  .main {
+    &__title {
+      font-size: 120px;
+    }
+    &__img {
+      max-width: 495px;
+    }
+    &__img_svg3 {
+      top: 207px;
+      right: -43px;
+  }
+  }
+}
+
 @media (max-width: 1190px) {
   .main {
     &_svg1 {
