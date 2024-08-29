@@ -205,12 +205,10 @@
       display: none;
     }
     &__sphere-1 {
-      z-index: -1;
       bottom: 549px;
       left: 146px;
     }
     &__sphere-2 {
-      z-index: -1;
       right: 70px;
       top: 213px;
     }
@@ -219,6 +217,9 @@
     }
     &__button {
       width: 48.2%;
+    }
+    &__from-us__item p {
+      z-index: 1;
     }
   }
 }
