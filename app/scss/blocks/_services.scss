@@ -270,7 +270,10 @@
   .services {
     padding: 49px 0px 40px;
     background-image: url(../images/services/services-bg-mobile.png);
-    background-position: center;
+    background-position-y: 27px;
+    &__items {
+      margin-top: 25px;
+    }
     &__cube {
       gap: 6px;
     }
@@ -284,6 +287,9 @@
       span {
         max-width: 273px;
       }
+    }
+    &__from-us {
+      margin: 20px 0px 27px;
     }
     &__from-us__item p {
       max-width: 168px;
@@ -305,7 +311,7 @@
       top: 343px;
     }
     &__sphere-2 {
-      right: 46px;
+      right: calc((100vw - 350px) / 2);
       top: 206px;
     }
     &__cube__text-light {
