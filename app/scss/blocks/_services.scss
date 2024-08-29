@@ -205,10 +205,12 @@
       display: none;
     }
     &__sphere-1 {
+      z-index: -1;
       bottom: 549px;
       left: 146px;
     }
     &__sphere-2 {
+      z-index: -1;
       right: 70px;
       top: 213px;
     }
@@ -265,6 +267,7 @@
     background-position: center;
     &__mobile-text {
       font-size: 17px;
+      z-index: 2;
     }
     &_title {
       font-size: 27px;
@@ -273,6 +276,7 @@
       font-size: 13px;
     }
     &__cube__img {
+      z-index: 1;
       width: unset;
       height: 155px;
     }
@@ -281,15 +285,14 @@
       min-height: 50px;
     }
     &__sphere-1 {
-      width: 23px;
-      bottom: 477px;
-      left: 24px;
-      bottom: 455px;
+     
+      left: 33px;
+      bottom: 555px;
     }
     &__sphere-2 {
-      width: 23px;
-      right: 22px;
-      top: 209px;
+     
+      right: 46px;
+      top: 206px;
     }
     &__cube__text-light {
       font-size: 14px;
