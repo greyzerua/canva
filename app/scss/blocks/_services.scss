@@ -56,7 +56,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 66%;
+    width: 65%;
     gap: 23px;
   }
   &__items {
@@ -73,6 +73,7 @@
   }
   &__cube__text-bold {
     font-size: 25px;
+    line-height: 1.2;
     font-weight: 700;
     span {
       color: $text-color;
@@ -80,6 +81,7 @@
   }
   &__cube__text-light {
     font-size: 20px;
+    line-height: 1.3;
     font-weight: 300;
     span {
       font-weight: 700;
