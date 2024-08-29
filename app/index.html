@@ -86,8 +86,13 @@
 
       <section class="services">
         <img src="./images/services/sphere-3-left.png" class="services__sphere-3 services__sphere">
-        <img src="./images/services/sphere-2-right.png" class="services__sphere-2 services__sphere">
-        <img src="./images/services/sphere-1-bottom.png" class="services__sphere-1 services__sphere">
+        <img class="services__sphere-2 services__sphere" 
+        srcset="./images/services/sphere-mobile-right.png 963w,
+                ./images/services/sphere-2-right.png"
+        media="(max-width: 963px)">
+        <img class="services__sphere-1 services__sphere" 
+        srcset="./images/services/sphere-mobile-bottom.png 963w,
+                ./images/services/sphere-1-bottom.png">
         <div class="width-container">
           <h2 class="services__title">
             Тепер ви зможете робити
@@ -95,8 +100,12 @@
           </h2>
           <div class="services__container">
             <div class="services__items">
+              <p class="services__mobile-text">
+                анімацією на основі штучного інтелекту, опанувавши
+                <span>12 додатків Canva</span> за <span>7 днів</span>
+              </p>
               <div class="services__cube">
-                <img src="./images/services/cube.svg" alt="" />
+                <img src="./images/services/cube.svg" class="services__cube__img"/>
                 <div class="services__cube__text">
                   <p class="services__cube__text-bold">
                     анімацією на основі штучного інтелекту, опанувавши
@@ -111,19 +120,19 @@
               <div class="services__from-us">
                 <div class="services__from-us__item">
                   <div class="services__from-us__circle">
-                    <img src="./images/services/time.svg" alt="" />
+                    <img src="./images/services/time.svg" />
                   </div>
                   <p>7 днів - 7 уроків, тривалістю 15-20 хвилин</p>
                 </div>
                 <div class="services__from-us__item">
                   <div class="services__from-us__circle">
-                    <img src="./images/services/3d.svg" alt="" />
+                    <img src="./images/services/3d.svg" />
                   </div>
                   <p>Практичні матеріали та приклади робіт у кожному уроці</p>
                 </div>
                 <div class="services__from-us__item">
                   <div class="services__from-us__circle">
-                    <img src="./images/services/money.svg" alt="" />
+                    <img src="./images/services/money.svg"/>
                   </div>
                   <p>
                     Все, що потрібно, щоб почати заробляти на графічному дизайні
@@ -131,7 +140,7 @@
                 </div>
                 <div class="services__from-us__item">
                   <div class="services__from-us__circle">
-                    <img src="./images/services/like.svg" alt="" />
+                    <img src="./images/services/like.svg" />
                   </div>
                   <p>Необмежений доступ до уроків</p>
                 </div>
