@@ -206,8 +206,8 @@
       display: none;
     }
     &__sphere-1 {
-      bottom: 549px;
-      left: 146px;
+      top: 424px;
+      left: 156px;
     }
     &__sphere-2 {
       right: 70px;
@@ -240,7 +240,7 @@
       top: 141px;
     }
     &__sphere-1 {
-      bottom: 479px;
+      top: 414px;
       left: 36px;
     }
     &__cube {
@@ -289,15 +289,21 @@
     }
     &__sphere-1 {
       left: 28px;
-      bottom: 539px;
+      top: 343px;
     }
     &__sphere-2 {
-     
       right: 46px;
       top: 206px;
     }
     &__cube__text-light {
       font-size: 14px;
     }
+  }
+}
+
+@media (max-width: 476px) {
+  .services__sphere-1 {
+    left: 28px;
+    top: 370px;
   }
 }
