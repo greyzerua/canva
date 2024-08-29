@@ -1,4 +1,11 @@
 .services {
+  position: relative;
+  background-image: url(../images/services/services-bg.png);
+  background-position: center;
+  width: 100vw;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 85px 0px 68px;
   &__sphere {
     position: absolute;
   }
@@ -21,18 +28,11 @@
     line-height: 1.1;
     margin-bottom: 14px;
     font-weight: 700;
-    span {
-      color: $text-color;
-    }
   }
-  position: relative;
-  background-image: url(../images/services/services-bg.png);
-  background-position: center;
-  width: 100vw;
-  min-height: 100vh;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  padding: 85px 0px 68px;
+  &__mobile-text span {
+    color: $text-color;
+  }
+  
   &__title {
     display: flex;
     flex-direction: column;
@@ -215,12 +215,16 @@
     }
     &__from-us {
       grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
     }
     &__button {
       width: 48.2%;
     }
     &__from-us__item p {
       z-index: 1;
+    }
+    &__from-us__item {
+      gap: 10px;
     }
   }
 }
@@ -258,7 +262,6 @@
       height: 70px;
       img {
         width: 40px;
-        height: 30px;
       }
     }
   }
@@ -268,21 +271,33 @@
     padding: 49px 0px 40px;
     background-image: url(../images/services/services-bg-mobile.png);
     background-position: center;
+    &__cube {
+      gap: 6px;
+    }
     &__mobile-text {
+      max-width: 350px;
       font-size: 17px;
       z-index: 2;
     }
-    &_title {
+    &__title {
       font-size: 27px;
+      span {
+        max-width: 273px;
+      }
     }
     &__from-us__item p {
+      max-width: 168px;
       font-size: 13px;
+    }
+    &__from-us__item:nth-child(4) p {
+      max-width: 130px;
+     
     }
     &__cube__img {
       z-index: 1;
     }
     &__button {
-      width: 280px;
+      width: 289px;
       min-height: 50px;
     }
     &__sphere-1 {
@@ -295,6 +310,10 @@
     }
     &__cube__text-light {
       font-size: 14px;
+      max-width: 190px;
+      &:nth-child(2) {
+        max-width: 185px;
+      }
     }
   }
 }
