@@ -15,6 +15,11 @@ body {
     font-family: 'Ubuntu';
     overflow-x: hidden;
 }
+
+img {
+    image-rendering: crisp-edges;
+}
+
 a{
     color: white;
 }
