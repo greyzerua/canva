@@ -20,4 +20,37 @@
       color: $secondary-color;
     }
   }
+  &__cube {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    gap: 23px;
+  }
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 83px;
+  }
+  &__cube__text {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+  &__cube__text-bold {
+    font-size: 25px;
+    font-weight: 700;
+    span {
+      color: $text-color;
+    }
+  }
+  &__cube__text-light {
+    font-size: 20px;
+    font-weight: 300;
+    span {
+      font-weight: 700;
+      color: $black;
+    }
+  }
 }
