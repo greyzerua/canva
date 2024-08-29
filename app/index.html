@@ -85,14 +85,23 @@
       </section>
 
       <section class="services">
-        <img src="./images/services/sphere-3-left.png" class="services__sphere-3 services__sphere">
-        <img class="services__sphere-2 services__sphere" 
-        srcset="./images/services/sphere-mobile-right.png 963w,
-                ./images/services/sphere-2-right.png"
-        media="(max-width: 963px)">
-        <img class="services__sphere-1 services__sphere" 
-        srcset="./images/services/sphere-mobile-bottom.png 963w,
-                ./images/services/sphere-1-bottom.png">
+        <picture>
+          <source
+            type="image/png"
+            srcset="./images/services/sphere-mobile-right.png"
+            media="(max-width:963px)"
+          />
+          <source
+          type="image/png"
+          srcset="./images/services/sphere-mobile-bottom.png"
+          media="(max-width:963px)"
+        />
+          <img src="./images/services/sphere-2-right.png" class="services__sphere-2 services__sphere">
+          <img src="./images/services/sphere-1-bottom.png" class="services__sphere-1 services__sphere">
+          <img src="./images/services/sphere-3-left.png" class="services__sphere-3 services__sphere">
+        </picture>
+        
+                
         <div class="width-container">
           <h2 class="services__title">
             Тепер ви зможете робити

@@ -3,15 +3,16 @@
     position: absolute;
   }
   &__sphere-3 {
-    top: 200px;
+    top: 207px;
+    left: 81px;
   }
   &__sphere-2 {
     right: 235px;
     top: 280px;
   }
   &__sphere-1 {
-    bottom: 55px;
-    left: 319px;
+    bottom: 70px;
+    left: 305px;
   }
   &__mobile-text {
     display: none;
@@ -235,10 +236,11 @@
       width: 50.2%;
     }
     &__sphere-2 {
-      right: 46px;
-      top: 152px;
+      right: 70px;
+      top: 141px;
     }
     &__sphere-1 {
+      bottom: 479px;
       left: 36px;
     }
     &__cube {
@@ -286,9 +288,8 @@
       min-height: 50px;
     }
     &__sphere-1 {
-     
-      left: 33px;
-      bottom: 555px;
+      left: 28px;
+      bottom: 539px;
     }
     &__sphere-2 {
      
