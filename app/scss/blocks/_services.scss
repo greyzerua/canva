@@ -201,9 +201,7 @@
     &__cube__text-light {
       font-size: 19px;
     }
-    &__cube__img {
-      width: 160px;
-    }
+   
     &__sphere-3 {
       display: none;
     }
@@ -282,8 +280,6 @@
     }
     &__cube__img {
       z-index: 1;
-      width: unset;
-      height: 155px;
     }
     &__button {
       width: 280px;
