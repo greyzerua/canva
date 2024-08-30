@@ -7,7 +7,48 @@
   background-size: 100%;
   background-repeat: no-repeat;
   padding: 85px 0px 102px;
-
+  //Mobile
+  &__icon-blog {
+    display: none;
+  }
+  &__icon-mobile-4 {
+    display: none;
+  }
+  &__icon-mobile-5 {
+    display: none;
+  }
+  &__icon-mobile-6 {
+    display: none;
+  }
+  &__icon-mobile-6-bottom {
+    display: none;
+  }
+  &__icon-mobile-mama {
+    display: none;
+  }
+  &__icon-smm {
+    display: none;
+  }
+  //Mobile
+  &__icon {
+    position: absolute;
+  }
+  &__icon-top-mobile-mama-desktop {
+    bottom: -10px;
+    right: 144px;
+  }
+  &__icon-top {
+    top: -52px;
+    right: 110px;
+  }
+  &__icon-bottom {
+    bottom: 347px;
+    right: 134px;
+  }
+  &__icon-left {
+    bottom: 109px;
+    left: 85px;
+  }
   &__title {
     color: $white-color;
     text-align: center;
@@ -17,6 +58,7 @@
 
   &__items {
     display: grid;
+    position: relative;
     grid-template-columns: repeat(3, 374px);
     row-gap: 80px;
     column-gap: 28px;
@@ -42,7 +84,7 @@
   &__wrap-title {
     margin-top: 62px;
   }
-  &__card__wrap img {
+  &__icon-items {
     position: absolute;
     top: -70px;
   }
@@ -81,21 +123,86 @@
     }
   }
 }
-@media (max-width: 1000px) {
+
+@media (max-width: 1635px) {
+  .for-whom {
+    &__icon-bottom {
+      bottom: 380px;
+      right: 26px;
+    }
+    &__icon-left {
+      bottom: 19px;
+      left: 85px;
+    }
+  }
+}
+
+@media (max-width: 1408px) {
   .for-whom {
     background-image: url(../images/for-whom/for-whom__bg-laptop.png);
+    border-radius: 70px;
     &__title {
       font-size: 46px;
     }
     &__items {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       justify-items: center;
       column-gap: 0px;
     }
     &__card__wrap {
-      width: 92%;
+      width: unset;
       max-width: none;
     }
+    //Mobile
+    &__icon-blog {
+      display: block;
+      left: -13px;
+      top: -21px;
+    }
+    &__icon-mobile-4 {
+      display: block;
+      top: -41px;
+      right: -25px;
+    }
+    &__icon-mobile-5 {
+      display: block;
+      top: -53px;
+      right: -21px;
+    }
+    &__icon-mobile-6 {
+      display: block;
+      top: -35px;
+      right: -23px;
+    }
+    &__icon-mobile-6-bottom {
+      display: block;
+      bottom: -5px;
+      right: 39px;
+    }
+    &__icon-mobile-mama {
+      display: block;
+      top: -67px;
+      left: -32px;
+    }
+    &__icon-smm {
+      display: block;
+      top: -53px;
+      right: -24px;
+    }
+    &__icon-top-mobile-mama-desktop {
+      display: none;
+    }
+    &__icon-top {
+      display: none;
+    }
+
+    &__icon-bottom {
+      display: none;
+    }
+    &__icon-left {
+      display: none;
+    }
+    //Mobile
   }
 }
 
@@ -104,11 +211,37 @@
     background-image: url(../images/for-whom/for-whom__bg-mobile.svg);
     background-position: unset;
     padding: 43px 0px 51px;
-    border-radius: unset;
+
     background-size: 100%;
     #mama {
       margin-bottom: unset;
     }
+    //Mobile
+    &__icon-blog {
+      display: block;
+    }
+    &__icon-mobile-4 {
+      display: block;
+    }
+    &__icon-mobile-5 {
+      display: block;
+    }
+    &__icon-mobile-6 {
+      display: block;
+    }
+    &__icon-mobile-6-bottom {
+      display: block;
+      bottom: -4px;
+      right: 34px;
+    }
+
+    &__icon-bottom {
+      display: none;
+    }
+    &__icon-left {
+      display: none;
+    }
+    //Mobile
     &__title {
       font-size: 27px;
       max-width: 309px;
@@ -116,7 +249,7 @@
     }
     &__card__wrap {
       width: 290px;
-      padding: 0px 7px 17px;;
+      padding: 0px 7px 17px;
       justify-content: center;
       min-height: unset;
       &:nth-child(n + 4):nth-child(-n + 6) {
@@ -134,7 +267,7 @@
     &__desc-subtitle {
       font-size: 14px;
     }
-    &__card__wrap img {
+    &__icon-items {
       width: 84px;
       top: -39px;
     }
