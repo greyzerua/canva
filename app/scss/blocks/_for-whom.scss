@@ -1,0 +1,146 @@
+.for-whom {
+  border-radius: 150px;
+  position: relative;
+  background-image: url(../images/for-whom/for-whom__bg.svg);
+  background-position: center;
+  width: 100vw;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 85px 0px 102px;
+
+  &__title {
+    color: $white-color;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 374px);
+    row-gap: 80px;
+    column-gap: 28px;
+    margin-top: 88px;
+  }
+  &__card__wrap {
+    display: flex;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0px 0px 30px 0px rgba(8, 49, 85, 0.1019607843);
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    min-height: 230px;
+    max-width: 374px;
+    position: relative;
+    padding: 0px 7px 7px;
+    &:nth-child(n + 4):nth-child(-n + 6) {
+      min-height: 260px;
+    }
+  }
+
+  &__wrap-title {
+    margin-top: 62px;
+  }
+  &__card__wrap img {
+    position: absolute;
+    top: -70px;
+  }
+
+  &__desc {
+    text-align: center;
+  }
+  &__desc-title {
+    color: $text-color;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  &__desc-subtitle {
+    max-width: 352px;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.6;
+    color: $black;
+
+    &:nth-child(1) p {
+      max-width: 302px;
+    }
+  }
+  #mama {
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 1725px) {
+  .for-whom {
+    background-size: unset;
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .for-whom {
+    background-image: url(../images/for-whom/for-whom__bg-laptop.png);
+    &__title {
+      font-size: 46px;
+    }
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      column-gap: 0px;
+    }
+    &__card__wrap {
+      width: 92%;
+      max-width: none;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .for-whom {
+    background-image: url(../images/for-whom/for-whom__bg-mobile.svg);
+    background-position: unset;
+    padding: 43px 0px 51px;
+    border-radius: unset;
+    background-size: 100%;
+    #mama {
+      margin-bottom: unset;
+    }
+    &__title {
+      font-size: 27px;
+      max-width: 309px;
+      margin: 0px auto;
+    }
+    &__card__wrap {
+      width: 290px;
+      padding: 0px 7px 17px;;
+      justify-content: center;
+      min-height: unset;
+      &:nth-child(n + 4):nth-child(-n + 6) {
+        min-height: unset;
+      }
+    }
+    &__items {
+      row-gap: 50px;
+      margin: 65px auto 0px;
+      grid-template-columns: repeat(1, 290px);
+    }
+    &__desc-title {
+      font-size: 17px;
+    }
+    &__desc-subtitle {
+      font-size: 14px;
+    }
+    &__card__wrap img {
+      width: 84px;
+      top: -39px;
+    }
+    &__wrap-title {
+      margin-top: unset;
+      margin-top: 48px;
+    }
+  }
+}
