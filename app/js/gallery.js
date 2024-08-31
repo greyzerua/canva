@@ -125,7 +125,6 @@ let shownCount = 0;
     }
     if (count !== shownCount) {
         shownCount = count;
-        console.log('shownCount', shownCount);
     }
   };
 
