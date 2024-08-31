@@ -5,6 +5,19 @@ document.addEventListener('DOMContentLoaded', function() {
   const hiddenGallery = document.querySelector('.work-examples__gallery--hidden');
   const videoModal = document.getElementById('videoModal');
 
+  document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+    dropdown.addEventListener('click', function() {
+      const content = this.querySelector('.dropdown-content');
+      const icon = this.querySelector('.icon');
+      
+      content.classList.toggle('open');
+      icon.classList.toggle('open');
+      this.classList.toggle('open');
+      
+      icon.textContent = content.classList.contains('open') ? '−' : '+';
+    });
+  });
+
   showMoreBtn.addEventListener('click', function(e) {
     e.preventDefault();
     

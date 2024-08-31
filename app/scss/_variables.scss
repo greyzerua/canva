@@ -10,6 +10,7 @@ $text-secondary: #49484C;
 $text-title: #022147;
 $white-color: #FFFFFF;
 $button-secondary-hover: darken($text-color, 15%);
+$light-gray-bg: #F4F5F8;
 
 @mixin default-label-text {
     font-weight: 300;
@@ -23,4 +24,4 @@ $button-secondary-hover: darken($text-color, 15%);
     line-height: 68.94px;
     text-align: center;
     color: $white-color;
-  }
+}
