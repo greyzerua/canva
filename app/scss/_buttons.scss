@@ -18,7 +18,7 @@
   background-color: $secondary-color;
   color: $white-color;
   box-shadow: 0px 0px 15px 0px #00000033;
-  
+
   &:hover {
     background-color: $hover-color;
   }
@@ -30,14 +30,14 @@
   color: $white-color;
   border: 2px solid $white-color;
   transition: all 0.3s ease;
-  
+
   &:hover {
     background-color: darken($text-color, 10%);
     box-shadow: 0 0 15px rgba(darken($text-color, 20%), 0.5);
   }
 }
 
-@media(max-width:800px) {
+@media (max-width: 800px) {
   .main {
     .button {
       min-height: 50px;
@@ -46,10 +46,8 @@
   }
 }
 
-@media(max-width:610px) {
-  .main {
-    .button {
-      font-size: 18px;
-    }
+@media (max-width: 680px) {
+  .button {
+    font-size: 16px;
   }
 }

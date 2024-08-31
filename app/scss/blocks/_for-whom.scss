@@ -1,0 +1,303 @@
+.for-whom {
+  border-radius: 150px;
+  position: relative;
+  background-image: url(../images/for-whom/for-whom__bg.svg);
+  background-position: center;
+  width: 100vw;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 85px 0px 102px;
+  //Mobile
+  &__icon-blog {
+    display: none;
+  }
+  &__icon-mobile-4 {
+    display: none;
+  }
+  &__icon-mobile-5 {
+    display: none;
+  }
+  &__icon-mobile-6 {
+    display: none;
+  }
+  &__icon-mobile-6-bottom {
+    display: none;
+  }
+  &__icon-mobile-mama {
+    display: none;
+  }
+  &__icon-smm {
+    display: none;
+  }
+  //Mobile
+  &__icon {
+    position: absolute;
+  }
+  &__icon-top-mobile-mama-desktop {
+    bottom: -10px;
+    right: 144px;
+  }
+  &__icon-top {
+    top: -52px;
+    right: 110px;
+  }
+  &__icon-bottom {
+    bottom: 347px;
+    right: 134px;
+  }
+  &__icon-left {
+    bottom: 109px;
+    left: 85px;
+  }
+  &__title {
+    color: $white-color;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+  }
+
+  &__items {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, 374px);
+    row-gap: 80px;
+    column-gap: 28px;
+    margin-top: 88px;
+  }
+  &__card__wrap {
+    display: flex;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0px 0px 30px 0px rgba(8, 49, 85, 0.1019607843);
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    min-height: 230px;
+    max-width: 374px;
+    position: relative;
+    padding: 0px 7px 7px;
+    &:nth-child(n + 4):nth-child(-n + 6) {
+      min-height: 260px;
+    }
+  }
+
+  &__wrap-title {
+    margin-top: 62px;
+  }
+  &__icon-items {
+    position: absolute;
+    top: -50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #91CFF2;
+    box-shadow: 0px 0px 4px 0px #0000001A inset;
+  }
+
+  &__icon-inner {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px 0px #0831551A;
+  }
+
+  &__desc {
+    text-align: center;
+  }
+  &__desc-title {
+    color: $text-color;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.25;
+  }
+  &__desc-subtitle {
+    max-width: 352px;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.6;
+    color: $black;
+
+    &:nth-child(1) p {
+      max-width: 302px;
+    }
+  }
+  #mama {
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 1725px) {
+  .for-whom {
+    background-size: unset;
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (max-width: 1635px) {
+  .for-whom {
+    &__icon-bottom {
+      bottom: 380px;
+      right: 26px;
+    }
+    &__icon-left {
+      bottom: 19px;
+      left: 85px;
+    }
+  }
+}
+
+@media (max-width: 1408px) {
+  .for-whom {
+    background-image: url(../images/for-whom/for-whom__bg-laptop.png);
+    border-radius: 70px;
+    &__title {
+      font-size: 46px;
+    }
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      column-gap: 0px;
+    }
+    &__card__wrap {
+      width: 90%;
+      max-width: none;
+    }
+    //Mobile
+    &__icon-blog {
+      display: block;
+      left: -13px;
+      top: -21px;
+    }
+    &__icon-mobile-4 {
+      display: block;
+      top: -41px;
+      right: -25px;
+    }
+    &__icon-mobile-5 {
+      display: block;
+      top: -53px;
+      right: -21px;
+    }
+    &__icon-mobile-6 {
+      display: block;
+      top: -35px;
+      right: -23px;
+    }
+    &__icon-mobile-6-bottom {
+      display: block;
+      bottom: -5px;
+      right: 39px;
+    }
+    &__icon-mobile-mama {
+      display: block;
+      top: -67px;
+      left: -32px;
+    }
+    &__icon-smm {
+      display: block;
+      top: -53px;
+      right: -24px;
+    }
+    &__icon-top-mobile-mama-desktop {
+      display: none;
+    }
+    &__icon-top {
+      display: none;
+    }
+
+    &__icon-bottom {
+      display: none;
+    }
+    &__icon-left {
+      display: none;
+    }
+    //Mobile
+  }
+}
+
+@media (max-width: 680px) {
+  .for-whom {
+    background-image: url(../images/for-whom/for-whom__bg-mobile.svg);
+    background-position: unset;
+    background-size: cover;
+    padding: 43px 0px 51px;
+    #mama {
+      margin-bottom: 7px;
+    }
+    //Mobile
+    &__icon-blog {
+      display: block;
+    }
+    &__icon-mobile-4 {
+      display: block;
+    }
+    &__icon-mobile-5 {
+      display: block;
+    }
+    &__icon-mobile-6 {
+      display: block;
+    }
+    &__icon-mobile-6-bottom {
+      display: block;
+      bottom: -4px;
+      right: 34px;
+    }
+
+    &__icon-bottom {
+      display: none;
+    }
+    &__icon-left {
+      display: none;
+    }
+    //Mobile
+    &__title {
+      font-size: 27px;
+      max-width: 309px;
+      margin: 0px auto;
+    }
+    &__card__wrap {
+      width: 290px;
+      padding: 0px 7px 17px;
+      justify-content: center;
+      min-height: unset;
+      &:nth-child(n + 4):nth-child(-n + 6) {
+        min-height: unset;
+      }
+    }
+    &__items {
+      row-gap: 50px;
+      margin: 65px auto 0px;
+      grid-template-columns: repeat(1, 290px);
+    }
+    &__desc-title {
+      font-size: 17px;
+      margin-bottom: 7px;
+    }
+    &__desc-subtitle {
+      font-size: 14px;
+    }
+    &__icon-items {
+      width: 84px;
+      height: 84px;
+      top: -42px;
+    }
+    &__icon-inner {
+      width: 60px;
+      height: 60px;
+    }
+    &__wrap-title {
+      margin-top: 57px;
+    }
+  }
+}

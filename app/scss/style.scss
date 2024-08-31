@@ -9,12 +9,14 @@
 @import './blocks/_services.scss';
 @import './blocks/_course-program.scss';
 @import './blocks/_work-examples.scss';
+@import './blocks/for-whom.scss';
+@import './blocks/how-it-works.scss';
 @import './blocks/_footer.scss';
 @import 'node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
 
 body {
     font-family: 'Ubuntu';
-    overflow-x: hidden;
+    overflow-x: hidden; 
 }
 
 a{
@@ -27,4 +29,8 @@ a{
     margin: 0 auto;
     max-width: 1197px;
     padding: 0 20px;
-  }
+}
+
+.title {
+    font-family: 'Ubuntu';
+}
