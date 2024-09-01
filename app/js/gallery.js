@@ -20,11 +20,15 @@ const workGalleryItems = [{
     img: './images/example-model.png',
     alt: 'Model',
     video: './videos/example-model.mp4'
+  }, {
+    img: './images/example-black.jpg',
+    alt: 'Black',
+    video: './videos/black.mp4'
   }];
 
   const DESKTOP_COUNT = 3;
-  const MOBILE_COUNT = 2;
-  const MOBILE_BREAKPOINT = 900;
+  const MOBILE_COUNT = 4;
+  const MOBILE_BREAKPOINT = 680;
   
 let shownCount = 0;
   
@@ -70,7 +74,7 @@ let shownCount = 0;
         itemContainer.dataset.video = video;
       }
       itemContainer.innerHTML = `
-        <img src="${img}" alt="${alt}" class="work-examples__image">
+        <img src="${img}" alt="${alt}" class="work-examples__image" width="340" height="340">
         ${video ? '<div class="work-examples__play-button"></div>' :''}
       `;
       itemContainer.onclick = () => onGalleryItemClick(item);
@@ -87,9 +91,11 @@ let shownCount = 0;
 
   const toggleShowMore = () => {
     const showMoreBtn = document.getElementById('showMoreBtn');
-    const hiddenGallery = document.querySelector('.work-examples__gallery--hidden');
+    const shownGallery = document.getElementById('gallery-shown');
+    const hiddenGallery = document.getElementById('gallery-hidden');
 
     hiddenGallery.classList.toggle('work-examples__gallery--visible');
+    shownGallery.classList.toggle('work-examples__gallery--shown');
       
       if (hiddenGallery.classList.contains('work-examples__gallery--visible')) {
         showMoreBtn.textContent = 'Сховати';
@@ -116,7 +122,8 @@ let shownCount = 0;
   }
 
   const updateShownCount = () => {
-    const clientWidth = document.documentElement.clientWidth;
+    const clientWidth = window.innerWidth;
+    
     let count;
     if (clientWidth <= MOBILE_BREAKPOINT) {
         count = MOBILE_COUNT;
