@@ -1,0 +1,67 @@
+:root {
+  --black: #333;
+  --rz: rgba(217, 90, 178, 0.8);
+  --white: white;
+  --sn: rgba(119, 196, 240, 0.8);
+  --bgr: #efefef;
+  --180height: 180px;
+}
+
+p {
+  color: #000;
+  font-family: Roboto, sans-serif;
+  line-height: 1.6;
+  font-size: 14px;
+}
+.z-of-privacy {
+  background-color: #fff;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 50px;
+  display: block;
+}
+.h2-privacy {
+  color: var(--black);
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 36px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-family: Roboto, sans-serif;
+}
+.p.otst-niz {
+  margin-bottom: 25px;
+}
+
+.center {
+  text-align: center;
+  align-items: center;
+}
+
+.privacy-section-yes {
+  background-color: #f5f5f4;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+}
+.l.pri {
+  font-size: 14px;
+  &:hover {
+    color: #333;
+    box-shadow: 6px 9px 0 -9px rgba(44, 168, 219, 0.5);
+  }
+}
+.l {
+  color: #1b96c9;
+  text-decoration: none;
+  transition: all 0.555s;
+  display: inline;
+  box-shadow: 0 1px rgba(44, 168, 219, 0.5);
+}
