@@ -39,6 +39,7 @@ let shownCount = 0;
       ${content}
     `;
     videoModal.style.display = 'block';
+    document.body.classList.add('modal-opened');
   
     const video = modalContent.querySelector('video');
     if (video) {
@@ -117,6 +118,7 @@ let shownCount = 0;
   const closeModal = () => {
     const videoModal = document.getElementById('videoModal');
     videoModal.style.display = 'none';
+    document.body.classList.remove('modal-opened');
     const modalContent = videoModal.querySelector('.video-modal__content');
     modalContent.innerHTML = '';
   }
