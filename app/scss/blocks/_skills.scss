@@ -1,5 +1,18 @@
 .skills {
+  position: relative;
   padding: 86px 0px 100px;
+  &__sphere-desk {
+    position: absolute;
+    &-1 {
+      top: -36px;
+      right: 91px;
+    }
+    &-2 {
+      z-index: -1;
+      bottom: 160px;
+      left: 128px;
+    }
+  }
   &__container {
     display: flex;
     flex-direction: column;
@@ -14,29 +27,52 @@
     margin-bottom: 39px;
   }
   &__info__wrap {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
   }
   &__info {
-    // padding: 27px 16px 33px 108px;
     position: relative;
-    max-width: 590px;
-    min-height: 195px;
-  }
-  &__info__img-icon {
-    position: absolute;
-    top: 15px;
-    left: 11px;
-  }
-  &__info__img-block {
-    width: 100%;
+    display: flex;
     height: 100%;
   }
+  &__info__img-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  &__info__img-after {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px 0px #0831551A;
+    clip-path: inset(-30px 0px -30px -30px);
+    background-color: #fff;
+    width: calc(100% + 2px);
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      right: 2px;
+      height: 60px;
+      width: 60px;
+      background: rgba(0, 0, 0, 0);
+      border-bottom-right-radius: 20px;
+      box-shadow: 5px 20px 0 0 #fff;
+    }
+  }
+  &__info__icon-wrap {
+    padding: 6px 19px 16px 0;
+  }
   &__text__wrap {
-    position: absolute;
-    top: 27px;
-    right: 18px;
+    padding: 27px 16px 33px 27px;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    background: #fff;
+    box-shadow: 0px 0px 30px 0px #0831551A;
   }
   &__info__title {
     font-size: 24px;
@@ -56,10 +92,13 @@
     font-size: 30px;
     color: $dark-color;
     font-weight: 800;
+    font-family: 'Ubuntu';
   }
   &__text {
     color: $black;
     font-size: 18px;
+    font-weight: 200;
+    text-align: center;
   }
   &__button {
     width: 430px;
@@ -71,5 +110,117 @@
     align-items: center;
     margin-top: 49px;
     gap: 36px;
+  }
+}
+
+@media (max-width: 1408px) {
+  .skills__title {
+    max-width: 600px;
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 859px) {
+  .skills {
+    &__sphere-desk {
+      display: none;
+    }
+    &__info__wrap {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__info__icon-wrap {
+      padding: 5px 11px 9px 0;
+    }
+    &__info__img-icon {
+      width: 46px;
+    }
+    &__info__img-after::before {
+      top: -40px;
+      height: 40px;
+      width: 40px;
+    }
+    &__text__wrap {
+      padding: 15px 15px 17px 20px;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .skills {
+    background-image: url(../images/skills/skills-bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 43px 0 70px;
+    background-position: -80vw center;
+    &__title {
+      font-size: 27px;
+      max-width: 350px;
+      margin-bottom: 26px;
+    }
+    &__info__wrap {
+      grid-template-columns: repeat(1, auto);
+      gap: 30px;
+      width: 100%;
+    }
+    &__result {
+      margin-top: 26px;
+      gap: 20px;
+    }
+    &__text-bold {
+      font-size: 20px;
+    }
+    &__text {
+      font-size: 14px;
+      max-width: 350px;
+      line-height: 1.45;
+    }
+    &__info {
+      width: 100%;
+      flex-direction: row-reverse;
+    }
+    &__info__title {
+      font-size: 17px;
+      margin-bottom: 13px;
+    }
+    &__info__subtitle {
+      font-size: 13px;
+      line-height: 1.3;
+      max-width: 269px;
+    }
+    &__text__wrap {
+      width: 100%;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 0;
+      padding: 15px 9px 17px 17px;
+    }
+    &__info__icon-wrap {
+      padding: 5px 0 9px 10px;
+    }
+    &__info__img-after {
+      border-radius: 0 20px 20px 0;
+      clip-path: inset(-30px -30px -30px 0px);
+
+      &::before {
+        top: -40px;
+        height: 40px;
+        width: 40px;
+        right: unset;
+        left: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 20px;
+        box-shadow: -5px 20px 0 0 #fff;
+      }
+    }
+    &__button {
+      min-height: 50px;
+      width: 289px;
+      margin-top: 7px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .skills__info__wrap {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
