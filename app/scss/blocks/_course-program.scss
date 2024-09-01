@@ -1,0 +1,140 @@
+.course-program {
+    background-color: $light-gray-bg;
+    padding: 80px 0;
+    overflow: hidden;
+  
+    &__title {
+      @extend .services__title;
+      color: $primary-color;
+      margin-bottom: 40px;
+    }
+  
+    .width-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .dropdown-outer {
+      width: 100%;
+      max-width: 790px;
+      margin: 0 auto;
+    }
+  
+    .dropdown {
+      position: relative;
+    }
+  
+    .dropdown-header {
+      position: relative;
+      background-image: url('/images/svg/course-lesson-rectangle.svg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center;
+      width: 100%;
+      height: 105px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 30px;
+    }
+  
+    .dropdown-header-content {
+      width: 92%;
+      max-width: 730px;
+      display: flex;
+      align-items: center;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: $dark-color;
+    }
+  
+    .lesson-number {
+      color: $secondary-color;
+      margin-right: 10px;
+    }
+  
+    .icon {
+      position: absolute;
+      right: 3.7%;
+      top: 30%;
+      transform: translateY(-50%);
+      width: 34px;
+      height: 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      font-weight: bold;
+      background-color: #000000;
+      border-radius: 50%;
+      color: white;
+      transition: background-color 0.3s ease;
+  
+      &.open {
+        background-color: $secondary-color;
+      }
+    }
+  
+    .dropdown-content {
+      position: relative;
+      top: -32px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, box-shadow 0.3s ease-out;
+      background-color: white;
+      width: 93%;
+      max-width: 730px;
+      margin: 0 auto;
+      border-radius: 0 0 20px 20px;;
+      box-shadow: 
+      30px 20px 20px -15px rgba(8, 49, 85, 0.05),
+      -30px 20px 20px -15px rgba(8, 49, 85, 0.05),
+      0 2px 1px -2px rgba(8, 49, 85, 0.008);
+      cursor: pointer;
+  
+      &.open {
+        max-height: 500px;
+        transition: max-height 0.5s ease-in, box-shadow 0.5s ease-in;
+      }
+  
+      h3 {
+        font-family: 'Gilroy-Medium', sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 17px;
+        text-align: left;
+        color: $black;
+        margin-bottom: 25px;
+      }
+  
+      ul {
+        list-style-type: none;
+        padding: 0;
+  
+        li {
+          font-family: 'Gilroy', sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 29px;
+          color: $black;
+          margin-bottom: 10px;
+  
+          .label {
+            font-family: 'Gilroy-Medium', sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 25px;
+            color: $black;
+          }
+        }
+      }
+    }
+  
+    .dropdown-item {
+      padding: 20px 20px 10px 30px
+    }
+  }
+  
