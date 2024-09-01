@@ -35,7 +35,7 @@ let shownCount = 0;
   const openModal = (content) => {
     const modalContent = videoModal.querySelector('.video-modal__content');
     modalContent.innerHTML = `
-      <span class="video-modal__close">&times;</span>
+      <span class="video-modal__close"></span>
       ${content}
     `;
     videoModal.style.display = 'block';
