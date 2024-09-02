@@ -1,12 +1,16 @@
 .course-program {
   background-color: $light-gray-bg;
-  padding: 80px 0;
+  padding: 80px 0 100px;
   overflow: hidden;
 
   &__title {
     @extend .services__title;
     color: $primary-color;
-    margin-bottom: 40px;
+    margin-bottom: 39px;
+  }
+
+  &__button {
+    margin-top: 34px;
   }
 
   .width-container {
@@ -36,7 +40,7 @@
     background-size: 100% 100%;
     background-position: center;
     width: 100%;
-    height: 105px;
+    height: 100px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -153,7 +157,8 @@
   }
 
   .dropdown-item {
-    padding: 20px 20px 10px 30px;
+    // padding: 20px 20px 10px 30px;
+    padding: 20px 20px 0px 30px;
   }
 }
 
@@ -173,11 +178,14 @@
       width: calc(34px - max(0px, min(12px, (700px - 100vw) * 0.0857)));
       height: calc(34px - max(0px, min(12px, (700px - 100vw) * 0.0857)));
     }
+
     .dropdown-header-content {
       font-size: 20px;
     }
+
     .dropdown-content {
       width: 92.33%;
+
       h3 {
         font-size: 20px;
       }
@@ -188,6 +196,12 @@
 @media (max-width: 590px) {
   .course-program {
     padding: 43px 0 94px;
+
+    &__button {
+      margin-top: 20px;
+      width: 289px;
+    }
+
     .dropdown {
       display: flex;
       align-items: center;
@@ -197,9 +211,11 @@
       width: 350px;
       position: relative;
     }
+
     #icon-3 {
       top: 37%;
     }
+
     .dropdown-header {
       background-image: unset;
       width: 100%;
