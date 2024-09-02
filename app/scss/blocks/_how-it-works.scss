@@ -40,9 +40,24 @@
   &__info__item-icon {
     width: 94px;
     height: 100px;
-    img {
-      width: 100%;
-      height: 100%;
+    position: relative;
+    background-size: cover;
+    background-image: url(../images/how-it-works/icons/how-it-works-icon-vector.svg);
+
+    &-wrap {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -40%);
+      width: 68px;
+      height: 66px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0px 0px 20px 0px #05223D33;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 15px;
     }
   }
   &__info__item__subtitle {
@@ -226,6 +241,14 @@
     &__info__item-icon {
       width: 58px;
       height: 62px;
+      &-wrap {
+        width: 42px;
+        height: 41px;
+        padding: 9px;
+        img {
+          width: 100%;
+        }
+      }
     }
     &__info__item {
       padding: 22px 8px;
