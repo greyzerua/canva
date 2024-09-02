@@ -18,8 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
       content.classList.toggle('open');
       icon.classList.toggle('open');
       this.classList.toggle('open');
-
-      icon.textContent = content.classList.contains('open') ? '−' : '+';
     });
   });
 
