@@ -1,7 +1,8 @@
 .course-program {
-  background-color: $light-gray-bg;
-  padding: 80px 0 100px;
+  background-color: #f4f5f8;
+  padding: 160px 0 100px;
   overflow: hidden;
+  margin-top: -90px;
 
   &__title {
     @extend .services__title;
@@ -109,7 +110,7 @@
 
   .dropdown-content {
     position: relative;
-    top: calc(-22px - max(7px,min(6px,(700px - 100vw)*.02)));
+    top: calc(-22px - max(7px, min(6px, (700px - 100vw) * 0.02)));
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out, box-shadow 0.3s ease-out;
@@ -176,6 +177,7 @@
 
 @media (max-width: 750px) {
   .course-program {
+    background: linear-gradient(to bottom, #f4f5f8, #ffffff);
     .icon {
       right: calc(2.9% + max(0%, min(0.1%, (700px - 100vw) * 0.00071)));
       top: calc(30% + max(0%, min(7%, (700px - 100vw) * 0.05)));
