@@ -31,10 +31,12 @@
   //   align-items: flex-start;
   //   max-width: calc(100% - 40px); // Adjust based on your icon size
   // }
-
+  .dropdown-mobile-img {
+    display: none;
+  }
   .dropdown-header {
     position: relative;
-    background-image: url('/images/svg/course-lesson-rectangle.svg');
+    background-image: url("/images/svg/course-lesson-rectangle.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -52,7 +54,7 @@
     max-width: 730px;
     display: flex;
     align-items: center;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-size: 22px;
     font-weight: 700;
     color: $dark-color;
@@ -96,9 +98,7 @@
     max-width: 730px;
     margin: 0 auto;
     border-radius: 0 0 20px 20px;
-    ;
-    box-shadow:
-      30px 20px 20px -15px rgba(8, 49, 85, 0.05),
+    box-shadow: 30px 20px 20px -15px rgba(8, 49, 85, 0.05),
       -30px 20px 20px -15px rgba(8, 49, 85, 0.05),
       0 2px 1px -2px rgba(8, 49, 85, 0.008);
     cursor: pointer;
@@ -109,7 +109,7 @@
     }
 
     h3 {
-      font-family: 'Gilroy-Medium', sans-serif;
+      font-family: "Gilroy-Medium", sans-serif;
       font-size: 25px;
       font-weight: 700;
       line-height: 17px;
@@ -123,7 +123,7 @@
       padding: 0;
 
       li {
-        font-family: 'Gilroy', sans-serif;
+        font-family: "Gilroy", sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 29px;
@@ -131,7 +131,7 @@
         margin-bottom: 10px;
 
         .label {
-          font-family: 'Gilroy-Medium', sans-serif;
+          font-family: "Gilroy-Medium", sans-serif;
           font-size: 17px;
           font-weight: 700;
           line-height: 25px;
@@ -142,14 +142,15 @@
   }
 
   .dropdown-item {
-    padding: 20px 20px 10px 30px
+    padding: 20px 20px 10px 30px;
   }
 }
 
 @media (max-width: 850px) {
   .course-program {
     .dropdown-content {
-      width: 92.4%
+      width: 97.5%;
+      top: calc(-16px - max(7px, min(6px,(700px - 100vw)* .02)));
     }
   }
 }
@@ -166,9 +167,41 @@
 }
 
 @media (max-width: 550px) {
+  .dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 350px;
+  }
   .course-program {
     .dropdown-header {
-      background-image: url('/images/svg/course-lesson-rectangle-mobile.svg');
+      background-image: unset;
+      width: unset;
+      height: unset;
+      padding: 0 0px;
+    }
+    .dropdown-mobile-img {
+      display: flex;
+      width: 100%;
+    }
+    .dropdown-header-content {
+      font-size: 17px;
+      width: 296px;
+      max-width: unset;
+    }
+    .lesson-number {
+      position: absolute;
+      bottom: 26px;
+      margin-right: 0px;
+    }
+    .icon {
+      transform: translateY(-178%);
+      right: -23px;
+      top: unset;
+      width: 34px;
+      height: 34px;
     }
   }
 }
