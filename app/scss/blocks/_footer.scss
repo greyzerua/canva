@@ -45,21 +45,33 @@
   }
 
   &__company-info, &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     flex: 1;
     @include default-label-text;
     line-height: 1.8;
     color: #fff;
   }
-
+  &__company-info-text {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 3px;
+      height: 1px;
+      background-color: #fff;
+    }
+  }
   &__company-info {
     text-align: center;
     p {
       margin: 0;
-      &:last-child {
-        text-decoration: none;
-      }
+     
     }
-   
   }
 
   &__links {
