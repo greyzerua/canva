@@ -1,7 +1,7 @@
-@import 'variables';
+@import "variables";
 
 .footer {
-  background-color: #E07FC1;
+  background-color: #e07fc1;
   padding: 50px 0;
   color: #fff;
   border-top-left-radius: 65px;
@@ -44,7 +44,8 @@
     color: #fff;
   }
 
-  &__company-info, &__links {
+  &__company-info,
+  &__links {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,12 +58,12 @@
   &__company-info-text {
     position: relative;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 3px;
-      height: 1px;
+      bottom: 1px;
+      height: 1.5px;
       background-color: #fff;
     }
   }
@@ -70,7 +71,6 @@
     text-align: center;
     p {
       margin: 0;
-     
     }
   }
 
@@ -78,19 +78,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+    text-align: center;
     a {
       color: #fff;
       text-decoration: none;
       margin-bottom: 6px;
       position: relative;
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 3px;
-        height: 1px;
+        bottom: 1px;
+        height: 1.5px;
         background-color: #fff;
       }
 
@@ -101,15 +101,17 @@
   }
 }
 
-@media (max-width:1126px) {
+@media (max-width: 1126px) {
   .footer {
-    &__copyright, &__company-info, &__links {
+    &__copyright,
+    &__company-info,
+    &__links {
       font-size: 14px;
     }
   }
 }
 
-@media (max-width:975px) {
+@media (max-width: 975px) {
   .footer {
     &__copyright {
       text-align: center;
@@ -120,7 +122,7 @@
   }
 }
 
-@media (max-width:889px) {
+@media (max-width: 889px) {
   .footer {
     padding: 29px 0;
     &__content {
@@ -132,13 +134,15 @@
     &__info {
       gap: 9px;
     }
-    &__company-info, &__links, &__copyright {
+    &__company-info,
+    &__links,
+    &__copyright {
       line-height: 1.4;
     }
   }
 }
 
-@media (max-width:717px) {
+@media (max-width: 717px) {
   .footer {
     &__icon {
       width: 46px;
