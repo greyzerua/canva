@@ -133,16 +133,19 @@
       position: absolute;
 
       &-1 {
+        width: 72px;
         top: 31px;
         left: 75px;
       }
 
       &-2 {
+        height: 104px;
         right: 0;
         top: -50px;
       }
 
       &-3 {
+        width: 53px;
         right: 82px;
         bottom: 47px;
       }
@@ -303,6 +306,7 @@
     &__sphere-mob {
       display: block;
       &-1 {
+        width: 23px;
         left: 8px;
         bottom: 77px;
       }
