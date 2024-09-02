@@ -10,14 +10,20 @@
     position: absolute;
   }
   &__sphere-3 {
+    width: 56px;
+    height: 56px;
     top: 207px;
     left: 81px;
   }
   &__sphere-2 {
+    width: 43px;
+    height: 43px;
     right: 235px;
     top: 280px;
   }
   &__sphere-1 {
+    width: 60px;
+    height: 60px;
     bottom: 70px;
     left: 305px;
   }
@@ -32,7 +38,7 @@
   &__mobile-text span {
     color: $text-color;
   }
-  
+
   &__title {
     display: flex;
     flex-direction: column;
@@ -58,6 +64,11 @@
     align-items: center;
     width: 65%;
     gap: 23px;
+  }
+  &__cube__img {
+    width: 207px;
+    height: 238px;
+    z-index: 1;
   }
   &__items {
     display: flex;
@@ -201,15 +212,19 @@
     &__cube__text-light {
       font-size: 19px;
     }
-   
+
     &__sphere-3 {
       display: none;
     }
     &__sphere-1 {
-      top: 424px;
-      left: 156px;
+      width: 23px;
+      height: 23px;
+      left: 40px;
+      top: 357px;
     }
     &__sphere-2 {
+      width: 23px;
+      height: 23px;
       right: 70px;
       top: 213px;
     }
@@ -296,9 +311,10 @@
     }
     &__from-us__item:nth-child(4) p {
       max-width: 130px;
-     
     }
     &__cube__img {
+      width: 135px;
+      height: 155px;
       z-index: 1;
     }
     &__button {
@@ -325,7 +341,7 @@
 
 @media (max-width: 476px) {
   .services__sphere-1 {
-    left: 28px;
-    top: 370px;
+    left: 35px;
+    top: 357px;
   }
 }
