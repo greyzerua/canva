@@ -41,8 +41,6 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding-top: 50px;
-  padding-bottom: 50px;
   display: flex;
   p {
     color: #000;
@@ -64,4 +62,11 @@
   transition: all 0.555s;
   display: inline;
   box-shadow: 0 1px rgba(44, 168, 219, 0.5);
+}
+
+@media (max-width: 991px) {
+  .z-of-privacy {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
