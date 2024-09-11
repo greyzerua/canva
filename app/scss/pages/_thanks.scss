@@ -1,13 +1,14 @@
 .section-thanks {
-  flex-flow: column;
   font-family: Roboto, sans-serif;
   font-size: 20px;
-  justify-content: center;
-  align-items: center;
-  line-height: 1.2;
-  height: 100vh;
+  line-height: 1.1;
   color: #000;
   text-align: center;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
   display: flex;
   p {
     width: 53%;
@@ -21,7 +22,7 @@
 }
 .heading-2.h2_thanks {
   text-transform: uppercase;
-  font-family: "OrchideaPro";
+  font-family: OrchideaPro, sans-serif;
   font-size: 34px;
   font-weight: 600;
 }
@@ -58,12 +59,17 @@
 
 @media (max-width: 743px) {
   .section-thanks p {
-    width: 100%;
+    line-height: 1.6;
+    width: 99%;
+  }
+  .container.cn_thanks {
+    padding: 15px;
   }
 }
 @media (max-width: 610px) {
   .heading-2.h2_thanks {
     font-size: 21px;
+    font-family: "OrchideaProBold";
   }
   .section-thanks {
     font-size: 16px;
