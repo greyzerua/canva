@@ -1,27 +1,27 @@
 
 const workGalleryItems = [{
-    img: './images/example-summer.jpg',
+    img: './images/example-summer.webp',
     alt: 'Summer'
   }, {
-    img: './images/example-season.jpg',
+    img: './images/example-season.webp',
     alt: 'Season'
   }, {
-    img: './images/example-new-product.jpg',
+    img: './images/example-new-product.webp',
     alt: 'New product'
   }, {
-    img: './images/example-healing-cream.png',
+    img: './images/example-healing-cream.webp',
     alt: 'Healing Cream',
     video: './videos/example-healing-cream.mp4'
   },{
-    img: './images/example-speakers.png',
+    img: './images/example-speakers.webp',
     alt: 'Speakers',
     video: './videos/example-speakers.mp4'
   }, {
-    img: './images/example-model.png',
+    img: './images/example-model.webp',
     alt: 'Model',
     video: './videos/example-model.mp4'
   }, {
-    img: './images/example-black.jpg',
+    img: './images/example-black.webp',
     alt: 'Black',
     video: './videos/black.mp4'
   }];
